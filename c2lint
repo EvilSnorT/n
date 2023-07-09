@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# Check a Malleable C&C Profile
+#
+
+java -XX:ParallelGCThreads=4 -XX:+UseParallelGC -classpath ./cobaltstrike.jar -javaagent:CSAgent.jar=3a4425490f389aeec312bdd758ad2b99 -Duser.language=en c2profile.Lint $1
